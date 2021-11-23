@@ -22,11 +22,11 @@ const ChatWindowAsWidgetPage: React.FC<any> = () => {
   const chatWindowContent = (
     <>
       <div>This is chat bot</div>
-      <div className="flex items-center justify-center w-full h-screen">
+      <div className="flex items-center justify-center w-96 h-96">
         {isLoading ? (
           <KPInitLoader></KPInitLoader>
         ) : isValidChatRoom ? (
-          <div className="flex justify-center w-full h-full p-0 lg:p-10">
+          <div className="flex justify-center p-0 lg:p-10">
             <ChatWindowContainer
               campaignDetails={campaignDetails}
             ></ChatWindowContainer>
@@ -41,16 +41,20 @@ const ChatWindowAsWidgetPage: React.FC<any> = () => {
   )
 
   return (
-    <div className="h-screen w-screen relative">
+    <div className="">
       <Popover
         content={chatWindowContent}
         trigger="click"
         visible={visible}
+        // getPopupContainer={()=>document.querySelector(".abc")}
+        placement={"topRight"}
+        className=""
       >
-        <div className="bottom-10 right-10 absolute z-10" 
-        onClick={() => {
-          setVisible(!visible)
-        }}><PlusCircleFilled /></div>
+      <div className="bottom-6 right-6 absolute"
+          onClick={() => {
+            setVisible(!visible)
+          }}><PlusCircleFilled/>
+        </div>
       </Popover>
     </div>
   );
