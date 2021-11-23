@@ -143,3 +143,11 @@ export enum PlayerButtonStatus {
   STOP = "stop",
   RE_RECORD = "re-record",
 }
+
+export enum DataParent {
+
+  KAPTIVATE = "KAPTIVATE",
+
+  BOT_WIDGET = 'BOT_WIDGET'
+
+}

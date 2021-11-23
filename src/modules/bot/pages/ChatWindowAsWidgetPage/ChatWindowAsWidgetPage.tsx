@@ -19,6 +19,10 @@ const ChatWindowAsWidgetPage: React.FC<any> = () => {
   const [responseSubmitted, setResponseSubmitted] = useState(false);
   const [visible, setVisible] = useState(false);
 
+  const handleBotVisibility = () => {
+    setVisible(!visible)
+  }
+
   const chatWindowContent = (
     <>
       <div>This is chat bot</div>
@@ -41,7 +45,7 @@ const ChatWindowAsWidgetPage: React.FC<any> = () => {
   )
 
   return (
-    <div className="">
+    <div className="bg-blue-400">
       <Popover
         content={chatWindowContent}
         trigger="click"
@@ -50,10 +54,8 @@ const ChatWindowAsWidgetPage: React.FC<any> = () => {
         placement={"topRight"}
         className=""
       >
-      <div className="bottom-6 right-6 absolute"
-          onClick={() => {
-            setVisible(!visible)
-          }}><PlusCircleFilled/>
+        <div className="bottom-6 right-6 absolute"
+          onClick={handleBotVisibility}><PlusCircleFilled className="text-3xl text-red-400" />
         </div>
       </Popover>
     </div>
