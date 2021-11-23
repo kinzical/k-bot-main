@@ -5,8 +5,8 @@ import ChatWindowAsWidgetPage from "./modules/bot/pages/ChatWindowAsWidgetPage";
 import JoinChatRoomPage from "./modules/bot/pages/JoinChatRoomPage";
 
 export const AppRoutes = () => {
-  const test: any = document.getElementById('kaptivate-chatbot')?.dataset.parent;
-  console.log(test)
+  const parent: any = document.getElementById('kaptivate-chatbot')?.dataset.parent;
+  console.log(parent)
 
   return (
     <Switch>
@@ -14,7 +14,7 @@ export const AppRoutes = () => {
         <Bot></Bot>
       </Route>
       {
-        test === DataParent.BOT_WIDGET ?
+        parent === DataParent.BOT_WIDGET ?
           <Route>
             <ChatWindowAsWidgetPage></ChatWindowAsWidgetPage>
           </Route>
@@ -22,7 +22,7 @@ export const AppRoutes = () => {
           null
       }
       {
-        test === DataParent.KAPTIVATE ?
+        parent === DataParent.KAPTIVATE ?
           <Route>
             <JoinChatRoomPage></JoinChatRoomPage>
           </Route>

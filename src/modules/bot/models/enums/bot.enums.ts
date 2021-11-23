@@ -145,9 +145,6 @@ export enum PlayerButtonStatus {
 }
 
 export enum DataParent {
-
   KAPTIVATE = "KAPTIVATE",
-
   BOT_WIDGET = 'BOT_WIDGET'
-
 }
