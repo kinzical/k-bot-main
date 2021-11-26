@@ -242,12 +242,12 @@ const ChatWindowContainer: React.FC<any> = (
             campaignStatus={campaignDetails?.status}
           ></HeaderContainer>
         </div>
-        <div className="hidden h-full lg:w-96 lg:block">
+        {/* <div className="hidden h-full lg:w-96 lg:block">
           <ChatSidebarContainer
             campaignName={campaignDetails?.campaignName}
             campaignStatus={campaignDetails?.status}
           ></ChatSidebarContainer>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col w-full h-full">
         <div className="w-full h-full overflow-y-auto">
